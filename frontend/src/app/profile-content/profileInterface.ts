@@ -1,0 +1,30 @@
+export interface ProfileData {
+    id: string;
+    profileImage: string;
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    email: string;
+    mobileNumber: number;
+    whatsAppNumber: number;
+    lineOne: string;
+    lineTwo: string;
+    streetName: string;
+    state: string;
+    country: string;
+    zipCode: number;
+    collegeName: string;
+    courseName: string;
+    graduationYear: Date;
+    certificateName: string;
+    certificateCourseName: string;
+    certifiedYear: Date;
+    companyName: string;
+    jobRole: string;
+    duration: number;
+    dateOfJoining: Date;
+    dateOfReleaving: Date;
+    noticePeriod: number;
+    declaration: string;
+    creator: string;
+}

@@ -1,0 +1,46 @@
+<div id="naibFraneContainer">
+    <div class="border">
+        <div class="welcome_container">
+            <div id="introDiv">
+                <mat-card>
+                    <mat-card-header><h2>Login to continue</h2></mat-card-header>
+                    <mat-card-content>
+                        <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+                            <mat-form-field>
+                                <input 
+                                    type="email"
+                                    name="email"
+                                    matInput
+                                    placeholder="Enter your email address"
+                                    ngModel
+                                    #email="ngModel" 
+                                />
+                    
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input 
+                                    type="password"
+                                    name="password"
+                                    matInput
+                                    placeholder="Enter yourl password"
+                                    ngModel
+                                    #password="ngModel" 
+                                />
+                            
+                            </mat-form-field>
+                            <div class="form-button">
+                                <button mat-raised-button type="submit" *ngIf="!isLoading">Login</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+                <hr>
+                <mat-card>
+                    <mat-card-header>If your not registered</mat-card-header>
+                    <mat-card-content><button mat-raised-button color="link" (click)="toSignUp()">Click here</button></mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
