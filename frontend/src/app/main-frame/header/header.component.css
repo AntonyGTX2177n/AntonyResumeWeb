@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.Toolbar {
+    color: whitesmoke;
+    background-blend-mode: darken;
+    background-color: rgba(62, 10, 20, 0.901);
+    padding: 30px;
+}

@@ -1,0 +1,99 @@
+:host {
+    display: block;
+    margin-top: 1rem;
+}
+
+mat-spinner {
+    margin: auto;
+}
+
+mat-paginator {
+    margin-top: 1rem;
+}
+
+.info-text {
+    text-align: center;
+}
+
+.resume_container {
+    margin: 5px;
+    border: 2px solid rgba(0, 0, 255, 0.778);
+    border-top-right-radius: 30px;
+    display: flex;
+    box-shadow: 2px 2px 14px rgba(0, 0, 255, 0.778);
+}
+
+.side_bar_container {
+    padding: 20px;
+    background-color: brown;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    width: 400px;
+}
+
+.main_content {
+    padding: 20px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+.divid_container { 
+    display: flex;
+    justify-content: space-around;
+}
+
+.divid_container_main h1 {   
+    font-weight: 900;
+    font-family: monospace;
+}
+
+.divid_container_main { 
+    text-transform: capitalize;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profile_pic {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.profile_pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    border: blue 1px solid;
+    box-shadow: white 2px 2px 12px;
+}
+
+.borderLine {
+    height: 5px;
+    background-color: white;
+    margin: 15px 0;
+}
+
+.borderLine_main {
+    height: 5px;
+    background-color: black;
+    margin: 15px 0;
+}
+
+.name {
+    text-align: center;
+}
+
+.contact p span {
+    font-size: 5px;
+}

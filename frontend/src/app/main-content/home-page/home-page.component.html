@@ -1,0 +1,59 @@
+<div id="naibFraneContainer">
+    <app-header></app-header>
+    <mat-sidenav-container>
+        <mat-sidenav #openedNav mode="side">
+            <mat-list>
+                <mat-list-item>
+                    <a 
+                        href="/content/profileCreate"
+                        routerLinkActive="mat-accent"
+                        mat-button>Profile
+                    </a>
+
+                </mat-list-item>
+                <mat-list-item>
+                    <a 
+                        href="/content/homePage"
+                        routerLinkActive="mat-accent"
+                        mat-button>Home Page
+                    </a>
+                </mat-list-item>
+                <mat-list-item>       
+                    <a 
+                        href="/content/homePage"
+                        routerLinkActive="mat-accent"
+                        mat-button>Videos
+                    </a>
+                </mat-list-item>
+            </mat-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="matTabsBg">
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="Create Profile"> 
+                        <app-post-profile></app-post-profile>            
+                    </mat-tab>
+                    <mat-tab label="View Profile">
+                        <app-view-profile></app-view-profile>
+                    </mat-tab>
+                    <mat-tab label="Edit Profile">Edit Profile</mat-tab>
+                    <mat-tab label="Show Side-bar" >
+                        <mat-grid-list cols="1" rowHeight="100px">
+                            <mat-grid-tile>
+                                <button 
+                                    mat-raised-button 
+                                    color="primary" 
+                                    (click)="openedNav.toggle()">
+                                     NAVIGATION
+                                </button>
+                            </mat-grid-tile>
+                        </mat-grid-list>                   
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+
+

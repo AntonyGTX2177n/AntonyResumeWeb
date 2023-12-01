@@ -1,0 +1,126 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion multi="true" *ngIf="posts.length > 0 && !isLoading">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      {{ post.firstName }}   {{ post.lastName }} - In   {{ post.middleName }}
+    </mat-expansion-panel-header>
+    <div class="resume_container">
+        <div class="side_bar_container">
+            <div class="profile_pic">
+                <img [src]="post.profileImage" [alt]="post.firstName">
+            </div>
+            <div class="name">
+                <h1>{{ post.firstName }}  {{ post.lastName }}</h1>           
+            </div>
+            <div class="borderLine"></div>
+            <div class="contact">
+                <h3>Contact-details</h3>
+                <div class="divid_container">
+                    <div class="names">
+                        <p>Email</p>
+                        <p>Mobile</p>                
+                        <p>WhatApp</p>                
+                    </div>
+                    <div class="seperation">
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                    </div>
+                    <div class="Values">
+                        <p>{{ post.email }}</p>
+                        <p>{{ post.mobileNumber }}</p>
+                        <p>{{ post.whatsAppNumber }}</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="borderLine"></div>
+            <div class="address">
+                <h3>Address</h3>
+                <ul>
+                    <li>{{ post.lineOne }}, {{ post.streetName }}</li>
+                    <li>{{ post.lineTwo }}</li>
+                    <li>{{ post.state }} {{ post.zipCode }}</li>
+                    <li>{{ post.country }}</li>
+                </ul>
+            </div>
+            <div class="borderLine"></div>
+            <div class="declaration">
+                <h3>Declaration</h3>
+                <ul>
+                    <li>{{ post.declaration }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main_content">
+            <div>
+                <h1>WORK EXPERIENCE</h1>
+                <div class="divid_container_main">
+                    <div class="names">
+                        <p>companyName </p>
+                        <p>jobRole </p>                
+                        <p>duration </p>                
+                        <p>dateOfJoining </p>                
+                        <p>dateOfReleaving </p>                
+                        <p>noticePeriod </p>                
+                    </div>
+                    <div class="seperation">
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                    </div>
+                    <div class="Values">
+                        <p>{{ post.companyName }}</p> 
+                        <p>{{ post.jobRole }}</p>
+                        <p>{{ post.duration }} years</p> 
+                        <p>{{ post.dateOfJoining }}</p>
+                        <p>{{ post.dateOfReleaving }}</p>
+                        <p>{{ post.noticePeriod }} months</p> 
+                    </div>
+                </div>     
+            </div>
+            <div class="borderLine_main"></div>           
+            <div>
+                <h1>EDUCATION DETAILS</h1>
+                <div class="divid_container_main">
+                    <div class="names">
+                        <p>collegeName </p>
+                        <p>courseName </p>                
+                        <p>graduationYear </p>               
+                        <p>certificateName </p>                
+                        <p>certificateCourseName </p>                
+                        <p>certifiedYear </p>                
+                    </div>
+                    <div class="seperation">
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                    </div>
+                    <div class="Values">
+                        <p>{{ post.collegeName }}</p> 
+                        <p>{{ post.courseName }}</p>
+                        <p>{{ post.graduationYear }}</p> 
+                        <p>{{ post.certificateName }}</p>
+                        <p>{{ post.certificateCourseName }}</p>
+                        <p>{{ post.certifiedYear }}</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="borderLine_main"></div> 
+        </div>
+    </div>
+    <mat-action-row *ngIf="userIsAuthenticated && userId === post.creator">
+        <button mat-raised-button (click)="onEditPage(post.id)">Edit</button>
+      <!-- <a mat-button color="primary" [routerLink]="['edit', post.id]">EDIT</a> -->
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)"
+  *ngIf="posts.length > 0"></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>

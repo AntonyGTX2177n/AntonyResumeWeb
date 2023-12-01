@@ -1,0 +1,111 @@
+.welcome_container {
+    padding: 20px;
+    text-align: center;
+}
+
+#introDiv {
+    color: whitesmoke;
+    background-color: grey;
+    width: 350px;
+    padding: 22px;
+    opacity: 80%;
+    box-shadow: 12px 12px 12px black;
+}
+
+#introDiv h1 {
+    margin: 0;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#introDiv p {
+    font-size: 20px;
+}
+
+
+@media (max-width: 500px) {
+    #naibFraneContainer {
+        background: url('../../images/LNS-small-screen.png');
+        width: 100%;
+        height: 100%;
+        height: 100%;
+        background-size: cover;
+        object-fit: contain;
+    }
+
+    #introDiv {
+        color: whitesmoke;
+        background: url('../../images/LNS-Big-screen.png');
+        width: 250px;
+        padding: 15px;
+        margin-top: 2%;
+        margin-left: 9%;
+        opacity: 90%;
+        box-shadow: -12px 12px 12px black;
+    }
+
+    #introDiv h1 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 900;
+        font-size: 30px;
+    }
+    
+    #introDiv p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 500px) {
+    #naibFraneContainer {
+        background: url('../../images/LNS-Big-screen.png');
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 800px) {
+
+    #naibFraneContainer {
+        background: url('../../images/LNS-Big-screen.png');
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        object-fit: contain;
+    }
+
+    #introDiv {
+        color: whitesmoke;
+        background: url('../../images/LNS-Big-screen.png');
+        width: 350px;
+        padding: 22px;
+        margin-top: 9%;
+        margin-left: 34%;
+        opacity: 95%;
+        box-shadow: 12px 12px 12px black;
+    }
+
+    #introDiv h1 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 900;
+        font-size: 40px;
+    }
+    
+    #introDiv p {
+        font-size: 20px;
+    }
+
+    @media (min-width: 1920px) {
+        #naibFraneContainer {
+            background: url('../../images/LNS-Big-screen.png');
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            object-fit: contain;
+        }
+    }
+}

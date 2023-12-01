@@ -1,0 +1,35 @@
+.profile_pic {
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile_picPreview {
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.profile_picPreview img {
+    background-size: cover;
+    object-fit: contain;
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+    box-shadow: black 6px 6px 6px;
+}
+
+.profile_pic p {
+    margin-top: 35px;
+    text-transform: uppercase;
+    color: white;
+}
+
+textarea {
+    width: 100%;
+}
+
